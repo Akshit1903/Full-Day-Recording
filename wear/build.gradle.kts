@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("kotlin-kapt")
 }
 
 android {
@@ -14,7 +15,6 @@ android {
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
-
     }
 
     buildTypes {
@@ -35,6 +35,9 @@ android {
     }
     buildFeatures {
         compose = true
+    }
+    kapt {
+        correctErrorTypes = true
     }
 }
 
@@ -81,5 +84,4 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     debugImplementation(libs.androidx.tiles.tooling)
-    wearApp(project(":wear"))
 }

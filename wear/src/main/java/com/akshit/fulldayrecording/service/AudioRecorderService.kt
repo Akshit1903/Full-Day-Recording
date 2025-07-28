@@ -9,6 +9,8 @@ import java.io.File
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.concurrent.atomic.AtomicBoolean
+import com.akshit.fulldayrecording.data.RecordingEntity
+import com.akshit.fulldayrecording.data.AppDatabase
 
 class AudioRecorderService(private val context: Context) {
     private var mediaRecorder: MediaRecorder? = null

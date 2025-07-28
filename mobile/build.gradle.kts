@@ -46,6 +46,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation("androidx.activity:activity-ktx:1.8.2")
     
     // Data storage
     implementation("androidx.room:room-runtime:2.6.1")
@@ -69,5 +70,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    wearApp(project(":wear"))
 }
